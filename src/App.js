@@ -53,12 +53,13 @@ function App() {
       role: formValues.roles,
     }
 
-    if (!member.username || ! member.email ) return 
+    if (!member.name || ! member.email ) return 
 
     fakeAxiosPost('fake.com', member)
         .then(res => {
           //and on success update the list of friends in state with the new friend from API
           const newMemberFromAPI = res.data
+          console.log(newMemberFromAPI)
           setTeamList([...teamList, newMemberFromAPI]);
         })
         .catch(err => {
