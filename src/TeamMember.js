@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function TeamMember(props) {
     const { details } = props;
-
+    console.log(details.role)
     if(!details) {
         return <h3>Working to fetch your member's details...</h3>
     } 

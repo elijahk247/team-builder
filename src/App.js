@@ -50,7 +50,7 @@ function App() {
       // id: uuid(), but will be handled backend 
       name: formValues.name.trim(),
       email: formValues.email.trim(),
-      role: formValues.roles,
+      role: formValues.role,
     }
 
     if (!member.name || ! member.email ) return 
